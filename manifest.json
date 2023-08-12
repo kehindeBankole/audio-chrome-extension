@@ -1,0 +1,16 @@
+{
+  "name": "Text Extension",
+  "version": "1.0.0",
+  "permissions": ["contextMenus" , "activeTab" , "scripting" ,  "webRequest", "tts"],
+  "description": "testing extension",
+  "manifest_version": 3,
+  "author": "Kehinde Bankole",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "background": {
+    "service_worker": "bg.js"
+  }
+}
