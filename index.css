@@ -1,0 +1,14 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  min-width: 250px;
+  min-height: 150px;
+}
+
+#checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-weight: 800 !important;
+}

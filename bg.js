@@ -1,5 +1,8 @@
+let voiceName;
 chrome?.contextMenus?.onClicked.addListener(function (info) {
-  chrome.tts.speak(info.selectionText);
+  chrome.tts.speak(info.selectionText, {
+    voiceName,
+  });
 });
 // Create one test item for each context type.
 let contexts = ['selection'];
@@ -23,3 +26,8 @@ chrome.contextMenus.create(
     }
   }
 );
+
+chrome.storage.onChanged.addListener(async () => {
+  const voiceFromStorage = await chrome.storage?.sync.get('voice');
+  voiceName = voiceFromStorage.voice.voiceName;
+});
